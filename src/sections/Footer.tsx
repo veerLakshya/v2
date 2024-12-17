@@ -53,7 +53,7 @@ export const Footer = () => {
           <p className="">&copy;2024 Blockforge. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
             {SocialIcons.map((icon, index) => (
-              <div className="inline-flex size-10 bg-zinc-800 rounded-full items-center justify-center">
+              <div key={index} className="inline-flex size-10 bg-zinc-800 rounded-full items-center justify-center">
                 {icon.icon}
               </div>
             ))}
