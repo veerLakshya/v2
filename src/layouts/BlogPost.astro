@@ -1,0 +1,18 @@
+---
+import "../styles/global.css";
+const { title, description, pubDate, author } = Astro.props;
+---
+
+<article class="prose lg:prose-xl mx-auto py-16">
+  <header>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <time datetime={pubDate.toISOString()}>{pubDate.toDateString()}</time>
+    <div>
+      <img src={author.image} alt={author.name} class="inline-block w-12 h-12 rounded-full" />
+      <p>{author.name}</p>
+      <p>{author.title}</p>
+    </div>
+  </header>
+  <slot />
+</article>
